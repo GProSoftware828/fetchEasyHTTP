@@ -1,6 +1,4 @@
 document.getElementById('button1').addEventListener('Submit', getJson);
-
-// Get local json data
 function getJson() {
   fetch('posts.json')
     .then(res => res.json())
@@ -16,7 +14,6 @@ function getJson() {
 };
 
 document.addEventListener('button2').addEventListener('Submit', postData);
-
 postData('posts.json', data) {
   return new Promise((resolve, reject) => {
     fetch('./posts.json', {
@@ -29,5 +26,5 @@ postData('posts.json', data) {
       .then(res => res.json())
       .then(data => resolve(data))
       .catch(err => reject(err));
-  });
+  })
 };

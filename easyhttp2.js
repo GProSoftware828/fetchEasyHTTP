@@ -16,7 +16,7 @@ class EasyHTTP {
 			});
 		const resData = await response.json();
 		return resData;
-	}
+	};
 
 	put(url, data) {
 		return new Promise((resolve, reject) => {
@@ -30,8 +30,8 @@ class EasyHTTP {
 				.then(res => res.json())
 				.then(data => resolve(data))
 				.catch(err => reject(err));
-		});
-	}
+		})
+	};
 
 	delete(url) {
 		return new Promise((resolve, reject) => {
@@ -44,6 +44,6 @@ class EasyHTTP {
 				.then(res => res.json())
 				.then(() => resolve('Resource deleted'))
 				.catch(err => reject(err));
-		});
-	}
+		})
+	};
 }
